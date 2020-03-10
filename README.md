@@ -8,7 +8,8 @@ A mobile game to help children explore the world
 
 This is the back-end of the Game
 To run it locally you will need OPENSKY username and password
-add that to a .env file on the root directory
+add that to a .env file on the root directory.
+
 To run the front-end locally check:
 [https://github.com/cinnamon-buns/destiNations-front](https://github.com/cinnamon-buns/destiNations-front)
 
