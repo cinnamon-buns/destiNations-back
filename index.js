@@ -12,12 +12,13 @@ dotenv.config();
 let tMinus2 = new Date();
 let tMinus4 = new Date();
 
-tMinus2.setHours(tMinus2.getHours() - 8);
-tMinus4.setHours(tMinus4.getHours() - 10);
+tMinus2.setHours(tMinus2.getHours() - 24);
+tMinus4.setHours(tMinus4.getHours() - 26);
+
+
 
 const end = Math.floor(tMinus2.getTime() / 1000);
 const begin = Math.floor(tMinus4.getTime() / 1000);
-
 
 
 const limitCountries = [
@@ -46,13 +47,12 @@ const limitCountries = [
   "AR",
   "IN"
 ];
-
-
+console.log(begin)
+console.log(end)
 app.get("/", (req, res) => {
   try {
     axios
       .get(
-
         `https://${process.env.OPENSKY_API_USERNAME}:${process.env.OPENSKY_API_PASSWORD}@opensky-network.org/api/flights/all?begin=${begin}&end=${end}`
 
       )
