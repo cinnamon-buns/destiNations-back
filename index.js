@@ -5,6 +5,7 @@ const port = process.env.PORT || 4000;
 
 const rawAirports = require("./Data/Airports/airports.json");
 const countriesList = require("./Data/countryinfo.json");
+const helloList = require("./Data/hello.json"); //add helloList
 
 const dotenv = require("dotenv");
 dotenv.config();
@@ -53,7 +54,7 @@ app.get("/", (req, res) => {
   try {
     axios
       .get(
-        `https://${process.env.OPENSKY_API_USERNAME}:${process.env.OPENSKY_API_PASSWORD}@opensky-network.org/api/flights/all?begin=${begin}&end=${end}`
+        `https://rafael:sharck@opensky-network.org/api/flights/all?begin=${begin}&end=${end}`
 
       )
       .then(data => {
@@ -93,7 +94,8 @@ app.get("/", (req, res) => {
                   countryInfoTo.jp = country.translations.ja;
                   countryInfoTo.flag = country.flag;
 
-                  countryInfoTo.cc = country.alpha2Code;
+                  countryInfoTo.cc = country.alpha2Code; //why are there this sentence again?
+                  countryInfoTo.greeting = helloList[0][country.alpha2Code]; //add greeting
 
                 }
 
@@ -109,8 +111,10 @@ app.get("/", (req, res) => {
                   countryInfoFrom.languages = country.languages;
                   countryInfoFrom.jp = country.translations.ja;
 
-                  countryInfoFrom.cc = country.alpha2Code;
+                  countryInfoFrom.cc = country.alpha2Code; //why are there this sentence again?
 
+                  countryInfoFrom.greeting = helloList[0][country.alpha2Code]; //add greeting
+                  
                 }
               });
 
