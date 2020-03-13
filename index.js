@@ -4,13 +4,15 @@ const axios = require("axios");
 const port = process.env.PORT || 4000;
 const rawAirports = require("./Data/Airports/airports.json");
 const countriesList = require("./Data/countryinfo.json");
+
 const helloList = require("./Data/hello.json"); //add helloList
+const animals = require("./Data/countryAnimals.json")
 const dotenv = require("dotenv");
 dotenv.config();
 let tMinus2 = new Date();
 let tMinus4 = new Date();
-tMinus2.setHours(tMinus2.getHours() - 26);
-tMinus4.setHours(tMinus4.getHours() - 28);
+tMinus2.setHours(tMinus2.getHours() - 20);
+tMinus4.setHours(tMinus4.getHours() - 22);
 const end = Math.floor(tMinus2.getTime() / 1000);
 const begin = Math.floor(tMinus4.getTime() / 1000);
 const limitCountries = [
@@ -69,6 +71,10 @@ app.get("/", (req, res) => {
       .get(
         `https://rafael:sharck@opensky-network.org/api/flights/arrival?airport=RPLL&begin=${begin}&end=${end}`
       ).then(data => data.data)
+      // const japan = await axios
+      // .get(
+      //   `https://rafael:sharck@opensky-network.org/api/flights/arrival?airport=RJAA&begin=${begin}&end=${end}`
+      // ).then(data => data.data)
 
         const allCountries =  countries.concat(brazil, australia, russia, thailand, philippines)
       planes = allCountries
@@ -102,7 +108,7 @@ app.get("/", (req, res) => {
                 countryInfoTo.languages = country.languages;
                 countryInfoTo.jp = country.translations.ja;
                 countryInfoTo.flag = country.flag;
-                countryInfoTo.cc = country.alpha2Code; //why are there this sentence again?
+                countryInfoTo.animal = animals[country.alpha2Code]; //animal
                 countryInfoTo.greeting = helloList[0][country.alpha2Code]; //add greeting
               }
               if (
@@ -114,7 +120,7 @@ app.get("/", (req, res) => {
                 countryInfoFrom.nativeName = country.nativeName;
                 countryInfoFrom.languages = country.languages;
                 countryInfoFrom.jp = country.translations.ja;
-                countryInfoFrom.cc = country.alpha2Code; //why are there this sentence again?
+                countryInfoTo.animal = animals[country.alpha2Code]; //animal
                 countryInfoFrom.greeting = helloList[0][country.alpha2Code]; //add greeting
               }
             });
