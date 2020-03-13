@@ -1,6 +1,6 @@
 # destiNations
 
-![Screenshot](https://github.com/cinnamon-buns/destiNations-front/blob/master/destinationslogo.png)
+<img src="https://github.com/cinnamon-buns/destiNations-front/blob/master/destinationslogo.png" alt="logo" width="200" align="right"/>
 
 A mobile game to help children explore the world
 
