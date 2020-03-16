@@ -94,8 +94,7 @@ app.get("/", (req, res) => {
         const allCountries =  countries.concat(brazil, australia, russia, thailand, philippines, argentina, greece, turkey)
       planes = allCountries
       planes.filter(element => {
-        // return element.estDepartureAirport && element.estArrivalAirport;
-        return element.estArrivalAirport
+        return element.estDepartureAirport && element.estArrivalAirport;
       });
       // const icao = Object.keys(rawAirports)
       toFrom = [];
