@@ -120,7 +120,7 @@ app.get("/", (req, res) => {
                 countryInfoFrom.nativeName = country.nativeName;
                 countryInfoFrom.languages = country.languages;
                 countryInfoFrom.jp = country.translations.ja;
-                countryInfoTo.animal = animals[country.alpha2Code]; //animal
+                countryInfoFrom.animal = animals[country.alpha2Code]; //animal
                 countryInfoFrom.greeting = helloList[0][country.alpha2Code]; //add greeting
               }
             });
