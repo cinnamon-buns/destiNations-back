@@ -9,12 +9,15 @@ const helloList = require("./Data/hello.json"); //add helloList
 const animals = require("./Data/countryAnimals.json")
 const dotenv = require("dotenv");
 dotenv.config();
-let tMinus2 = new Date();
+let tMinus2  = new Date();
 let tMinus4 = new Date();
+
 tMinus2.setHours(tMinus2.getHours() - 20);
 tMinus4.setHours(tMinus4.getHours() - 22);
+
 const end = Math.floor(tMinus2.getTime() / 1000);
 const begin = Math.floor(tMinus4.getTime() / 1000);
+
 const limitCountries = [
   "EG",
   "US",
@@ -71,15 +74,28 @@ app.get("/", (req, res) => {
       .get(
         `https://rafael:sharck@opensky-network.org/api/flights/arrival?airport=RPLL&begin=${begin}&end=${end}`
       ).then(data => data.data)
-      // const japan = await axios
+      const argentina = await axios
+      .get(
+        `https://rafael:sharck@opensky-network.org/api/flights/arrival?airport=SAEZ&begin=${begin}&end=${end}`
+      ).then(data => data.data)
+      const greece = await axios
+      .get(
+        `https://rafael:sharck@opensky-network.org/api/flights/arrival?airport=LGAV&begin=${begin}&end=${end}`
+      ).then(data => data.data)
+      const turkey = await axios
+      .get(
+        `https://rafael:sharck@opensky-network.org/api/flights/arrival?airport=LTAC&begin=${begin}&end=${end}`
+      ).then(data => data.data)
+      // const southAfrica = await axios
       // .get(
-      //   `https://rafael:sharck@opensky-network.org/api/flights/arrival?airport=RJAA&begin=${begin}&end=${end}`
+      //   `https://rafael:sharck@opensky-network.org/api/flights/arrival?airport=FAGC&begin=${begin}&end=${end}`
       // ).then(data => data.data)
 
-        const allCountries =  countries.concat(brazil, australia, russia, thailand, philippines)
+        const allCountries =  countries.concat(brazil, australia, russia, thailand, philippines, argentina, greece, turkey)
       planes = allCountries
       planes.filter(element => {
-        return element.estDepartureAirport && element.estArrivalAirport;
+        // return element.estDepartureAirport && element.estArrivalAirport;
+        return element.estArrivalAirport
       });
       // const icao = Object.keys(rawAirports)
       toFrom = [];
