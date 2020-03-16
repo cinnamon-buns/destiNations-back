@@ -12,8 +12,8 @@ dotenv.config();
 let tMinus2  = new Date();
 let tMinus4 = new Date();
 
-tMinus2.setHours(tMinus2.getHours() - 20);
-tMinus4.setHours(tMinus4.getHours() - 22);
+tMinus2.setHours(tMinus2.getHours() - 24);
+tMinus4.setHours(tMinus4.getHours() - 26);
 
 const end = Math.floor(tMinus2.getTime() / 1000);
 const begin = Math.floor(tMinus4.getTime() / 1000);
@@ -44,8 +44,8 @@ const limitCountries = [
   "AR",
   "IN"
 ];
-console.log(begin)
-console.log(end)
+// console.log(begin)
+// console.log(end)
 
 app.get("/", (req, res) => {
   // https://opensky-network.org/api/states/all?time=1458564121&icao24=3c6444
@@ -94,7 +94,9 @@ app.get("/", (req, res) => {
         const allCountries =  countries.concat(brazil, australia, russia, thailand, philippines, argentina, greece, turkey)
       planes = allCountries
       planes.filter(element => {
-        return element.estDepartureAirport && element.estArrivalAirport;
+        if (element) {
+          return element.estDepartureAirport && element.estArrivalAirport;
+        }
       });
       // const icao = Object.keys(rawAirports)
       toFrom = [];
