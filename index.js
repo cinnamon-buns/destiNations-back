@@ -12,8 +12,8 @@ dotenv.config();
 let tMinus2  = new Date();
 let tMinus4 = new Date();
 
-tMinus2.setHours(tMinus2.getHours() - 24);
-tMinus4.setHours(tMinus4.getHours() - 26);
+tMinus2.setHours(tMinus2.getHours() - 26);
+tMinus4.setHours(tMinus4.getHours() - 28);
 
 const end = Math.floor(tMinus2.getTime() / 1000);
 const begin = Math.floor(tMinus4.getTime() / 1000);
