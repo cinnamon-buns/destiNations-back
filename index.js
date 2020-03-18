@@ -45,9 +45,14 @@ const limitCountries = [
   "IN"
 ];
 
+begin = 1584383694
+end = 1584390894
 
-// console.log(begin)
-// console.log(end)
+console.log(begin)
+console.log(end)
+
+
+
 
 app.get("/", (req, res) => {
   // https://opensky-network.org/api/states/all?time=1458564121&icao24=3c6444
