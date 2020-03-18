@@ -12,11 +12,11 @@ dotenv.config();
 let tMinus2  = new Date();
 let tMinus4 = new Date();
 
-tMinus2.setHours(tMinus2.getHours() - 40);
-tMinus4.setHours(tMinus4.getHours() - 44);
+tMinus2.setHours(tMinus2.getHours() - 28);
+tMinus4.setHours(tMinus4.getHours() - 30);
 
-const end = Math.floor(tMinus2.getTime() / 1000);
-const begin = Math.floor(tMinus4.getTime() / 1000);
+let end = Math.floor(tMinus2.getTime() / 1000);
+let begin = Math.floor(tMinus4.getTime() / 1000);
 
 const limitCountries = [
   "EG",
@@ -44,6 +44,8 @@ const limitCountries = [
   "AR",
   "IN"
 ];
+
+
 // console.log(begin)
 // console.log(end)
 
@@ -86,12 +88,9 @@ app.get("/", (req, res) => {
       .get(
         `https://rafael:sharck@opensky-network.org/api/flights/arrival?airport=LTAC&begin=${begin}&end=${end}`
       ).then(data => data.data)
-      // const southAfrica = await axios
-      // .get(
-      //   `https://rafael:sharck@opensky-network.org/api/flights/arrival?airport=FAGC&begin=${begin}&end=${end}`
-      // ).then(data => data.data)
+ 
 
-        const allCountries =  countries.concat(brazil, australia, russia, thailand, philippines, argentina, greece, turkey)
+      const allCountries =  countries.concat(brazil, australia, russia, thailand, philippines, argentina, greece, turkey)
       planes = allCountries
       planes.filter(element => {
         if (element) {
