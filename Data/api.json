@@ -408,9 +408,9 @@
     {
       "icao24": "e47ec0",
       "firstSeen": 1517228150,
-      "estDepartureAirport": "VTBS",
+      "estDepartureAirport": "RJAA",
       "lastSeen": 1517229119,
-      "estArrivalAirport": "RJAA",
+      "estArrivalAirport": "VTBS",
       "callsign": null,
       "estDepartureAirportHorizDistance": null,
       "estDepartureAirportVertDistance": null,
@@ -436,9 +436,9 @@
     {
       "icao24": "a0d6a8",
       "firstSeen": 1517227709,
-      "estDepartureAirport": "KHPN",
+      "estDepartureAirport": "ZBAA",
       "lastSeen": 1517228968,
-      "estArrivalAirport": null,
+      "estArrivalAirport": "RKSI",
       "callsign": null,
       "estDepartureAirportHorizDistance": 7816,
       "estDepartureAirportVertDistance": 978,
