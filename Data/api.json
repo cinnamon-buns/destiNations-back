@@ -464,9 +464,9 @@
     {
       "icao24": "71c247",
       "firstSeen": 1517227303,
-      "estDepartureAirport": null,
+      "estDepartureAirport": "KJFK",
       "lastSeen": 1517228516,
-      "estArrivalAirport": null,
+      "estArrivalAirport": "YSSY",
       "callsign": "KAL850  ",
       "estDepartureAirportHorizDistance": null,
       "estDepartureAirportVertDistance": null,
@@ -478,9 +478,9 @@
     {
       "icao24": "78006a",
       "firstSeen": 1517227855,
-      "estDepartureAirport": null,
+      "estDepartureAirport": "RJAA",
       "lastSeen": 1517228473,
-      "estArrivalAirport": null,
+      "estArrivalAirport": "KJFK",
       "callsign": "CXA8611 ",
       "estDepartureAirportHorizDistance": null,
       "estDepartureAirportVertDistance": null,
