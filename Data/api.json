@@ -492,9 +492,9 @@
     {
       "icao24": "885304",
       "firstSeen": 1517227247,
-      "estDepartureAirport": null,
+      "estDepartureAirport": "KJFK",
       "lastSeen": 1517228537,
-      "estArrivalAirport": null,
+      "estArrivalAirport": "MMMX",
       "callsign": "THD328  ",
       "estDepartureAirportHorizDistance": null,
       "estDepartureAirportVertDistance": null,
@@ -506,9 +506,9 @@
     {
       "icao24": "89407b",
       "firstSeen": 1517228981,
-      "estDepartureAirport": null,
+      "estDepartureAirport": "KJFK",
       "lastSeen": 1517229877,
-      "estArrivalAirport": null,
+      "estArrivalAirport": "CYVR",
       "callsign": "GFA070  ",
       "estDepartureAirportHorizDistance": null,
       "estDepartureAirportVertDistance": null,
