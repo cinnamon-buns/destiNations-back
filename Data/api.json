@@ -450,9 +450,9 @@
     {
       "icao24": "506dc2",
       "firstSeen": 1517228930,
-      "estDepartureAirport": null,
+      "estDepartureAirport": "LFPG",
       "lastSeen": 1517229689,
-      "estArrivalAirport": "LOKN",
+      "estArrivalAirport": "EDDT",
       "callsign": "S5DJJ   ",
       "estDepartureAirportHorizDistance": null,
       "estDepartureAirportVertDistance": null,
