@@ -1,5 +1,5 @@
 [
-    {
+  {
     "A1": "Hello",
     "A2": "Hello",
     "AD": "Hola",
@@ -63,7 +63,7 @@
     "DZ": "Marhaba",
     "EC": "Hola",
     "EE": "Tervist",
-    "EG": "ألسّلام عليكم",
+    "EG": "سلام عليكم",
     "ER": "Marhaba",
     "ES": "Hola",
     "ET": "Teanastëllën",
@@ -118,7 +118,7 @@
     "KM": "Bariza djioni",
     "KN": "Hello",
     "KP": "&#50504;&#45397;&#54616;&#49464;&#50836;",
-    "KR": "여보세요",
+    "KR": "안녕하세요",
     "KW": "Marhaba",
     "KY": "Hello",
     "KZ": "Salam",
@@ -240,5 +240,5 @@
     "ZM": "Hello",
     "ZW": "Hello",
     "RD": "Hello"
-    }
+  }
 ]
